@@ -3,7 +3,7 @@
 body {
 	background: linear-gradient(-45deg, #23a6d5, #93d4ec, #79eacf, #23d5ab);
 	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+	animation: gradient 5s ease infinite;
 	height: 100vh;
 }
 
@@ -17,4 +17,30 @@ body {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+@theme {
+  --font-bitcount: "Bitcount Prop Single", system-ui;
+  --font-lora: "Lora", serif;
+}
+
+.font-lora-italic {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.font-lora-semibold-italic {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.font-lora-bold-italic {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: italic;
 }

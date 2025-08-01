@@ -41,7 +41,7 @@ router.get("/home", (req, res) => {
     if (!req.isAuthenticated()) {
         res.redirect("/");
     }
-    res.send("Hey there");
+    res.redirect("http://localhost:5173/home");
 });
 
 router.get("/logout", (req, res) => {
@@ -51,8 +51,7 @@ router.get("/logout", (req, res) => {
 });
 
 router.get("/", (req, res) => {
-    res.send("<a href='/auth'>Sign in with Google</a>");
-    // res.redirect("/auth");
+    res.redirect("/auth");
 });
 
 export default router;
