@@ -7,13 +7,11 @@ export const useEvents = () =>{
     const interval = useRef<NodeJS.Timeout>(null)
 
     useEffect(() => {
-
         const startPolling = () => {
             if (interval.current) return;
 
             interval.current = setInterval(async () => {
                 const newEvnts = await getEventUpdates();
-                console.log(JSON.stringify(newEvnts))
                 if (newEvnts.length > 0) 
                     setEvents(evnt => [...evnt, ...newEvnts]);
             }, 10000);
